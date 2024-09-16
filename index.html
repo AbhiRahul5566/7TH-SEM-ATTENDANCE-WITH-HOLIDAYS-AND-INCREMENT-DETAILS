@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSBS Attendance Calculation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="attendance.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>CSBS Attendance Calculator</h1>
+        <form id="attendance-form">
+            <label for="attendance">Current Attendance Percentage:</label>
+            <input type="number" id="attendance" min="0" max="100" placeholder="e.g. 75" required>
+
+            <label for="calculationType">Calculate for Midterm or Semester:</label>
+            <select id="calculationType" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="M">Midterm</option>
+                <option value="S">Semester</option>
+            </select>
+
+            <p><strong>Note:</strong> You can't miss any class after this.</p>
+        </form>
+
+        <!-- Two separate spaces for outputs -->
+        <div id="result" class="output-box"></div> <!-- Displays the final attendance -->
+        <div id="expectedOutput" class="output-box"></div> <!-- Displays the detailed message -->
+        <div id="incrementOutput" class="output-box"></div> <!-- Displays attendance increment per class -->
+    </div>
+</body>
+</html>
